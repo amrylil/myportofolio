@@ -1,9 +1,9 @@
 import { useRef } from "react";
-import Navbar from "./components/Navbar";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import Home from "./pages/home";
 import Portofolio from "./pages/portofolio";
+import Navbar from "./components/layouts/Navbar";
 
 function App() {
   const aboutRef = useRef();

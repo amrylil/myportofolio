@@ -1,0 +1,30 @@
+{
+  // Mengaktifkan format otomatis saat menyimpan file
+  "editor.formatOnSave": true,
+
+  // Menjadikan Prettier sebagai formatter default untuk semua bahasa
+  // Ini akan memastikan konsistensi jika ada formatter lain yang terinstal
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Anda juga bisa spesifik per bahasa (lebih direkomendasikan)
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Mengaktifkan "Code Actions on Save" seperti auto-organize imports
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+}

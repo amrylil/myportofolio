@@ -14,6 +14,8 @@ const Navbar = ({
   const handleBtnMenu = () => {
     setBtnMenu(!btnMenu);
   };
+
+  
   return (
     <div className="w-full flex justify-center">
       <Analytics />
