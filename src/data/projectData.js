@@ -6,6 +6,7 @@ import {
   FaPhp,
   FaNodeJs,
 } from "react-icons/fa";
+import { FaGolang } from "react-icons/fa6";
 import { FiYoutube } from "react-icons/fi";
 import {
   SiTailwindcss,
@@ -18,6 +19,13 @@ import {
   SiKotlin,
   SiFirebase,
   SiMongoose,
+  SiMysql,
+  SiAlpinedotjs,
+  SiFilament,
+  SiLivewire,
+  SiGoland,
+  SiReact,
+  SiJavascript,
 } from "react-icons/si";
 
 export const projectsData = [
@@ -37,7 +45,7 @@ export const projectsData = [
     demoUrl: "https://lil-portofolio.vercel.app/",
   },
   {
-    title: "Blood Donor System API",
+    title: "Donor System API",
     description:
       "A RESTful API for managing donors and blood stock with OAuth authentication, using PostgreSQL for the database and Cloudinary for image storage.",
     type: "Backend",
@@ -51,7 +59,7 @@ export const projectsData = [
     demoUrl: "https://donor-darah.duckdns.org/swagger/index.html",
   },
   {
-    title: "Blood Donor System Mobile App",
+    title: "Donor System Mobile App",
     description:
       "A mobile application for donor registration, viewing donor locations, events, and blood needs, connected to a backend API.",
     type: "Mobile",
@@ -59,7 +67,7 @@ export const projectsData = [
       { name: "Flutter", icon: SiFlutter },
       { name: "Dart", icon: SiDart },
     ],
-    imageUrl: "images/projectPic/donordarahapp.png",
+    imageUrl: "images/projectPic/donor.jpg",
     url: "https://github.com/amrylil/donor_mobile_app",
     demoUrl: "https://your-demo-link.com/...",
   },
@@ -75,24 +83,54 @@ export const projectsData = [
       { name: "PosgreSql", icon: SiPostgresql },
     ],
     imageUrl: "images/projectPic/coffeshop.jpg",
-    url: "https://github.com/amrylil/hotel-reservasi-app",
-    demoUrl: "https://coffeshop-main-je8hnu.laravel.cloud/...",
+    url: "https://github.com/amrylil/coffeshop",
+    demoUrl: "https://coffeshop-main-je8hnu.laravel.cloud",
   },
   {
-    title: "Hotel Reservation System",
+    title: "Helpdesk LLDIKTI 9",
     description:
-      "A hotel reservation application with features for booking rooms, online payment via Midtrans, and reservation management.",
+      "A helpdesk system developed during my MSIB Batch 7 internship at LLDIKTI 9. I worked on the backend API, while the frontend was built using React JS. The system manages support tickets with authentication and role-based access.",
     type: "Fullstack",
     techStack: [
-      { name: "Express.js", icon: FaNodeJs },
+      { name: "Golang", icon: FaGolang, color: "#00ADD8" },
+      { name: "Gin", icon: SiGin, color: "#008ECF" },
+      { name: "SQL Server", icon: SiMysql, color: "#A91D22" },
+      { name: "ReactJS", icon: SiReact, color: "#61DAFB" },
+      { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
+      { name: "Tailwind", icon: SiTailwindcss, color: "#38BDF8" },
+    ],
+    imageUrl: "images/projectPic/dikti.jpg",
+    url: "https://github.com/amrylil/helpdesk-lldikti9",
+    demoUrl: "https://cshelpdesk-fe-v-2-2024-forked.vercel.app/",
+  },
+  {
+    title: "Hotel Reservation Website",
+    description:
+      "Frontend website for hotel booking, integrated with backend API to display available rooms, handle reservations, and payments.",
+    type: "Frontend",
+    techStack: [
       { name: "ReactJS", icon: FaReact },
-      { name: "MongoDB", icon: SiMongodb },
       { name: "Tailwind", icon: SiTailwindcss },
+      { name: "Javascript", icon: SiJavascript },
+      { name: "Html", icon: FaHtml5 },
+    ],
+    imageUrl: "images/projectPic/hotel.jpg",
+    url: "https://github.com/amrylil/hotel-reservasi-view",
+    demoUrl: "https://hotel-reservasi.vercel.app",
+  },
+  {
+    title: "Hotel Reservation API",
+    description:
+      "Backend RESTful API for hotel room booking, payment integration with Midtrans, and reservation management.",
+    type: "Backend",
+    techStack: [
+      { name: "Express.js", icon: FaNodeJs },
+      { name: "MongoDB", icon: SiMongodb },
       { name: "Mongoose", icon: SiMongoose },
     ],
-    imageUrl: "images/projectPic/reservasi-hotel.jpg",
-    url: "https://github.com/amrylil/hotel-reservasi-app",
-    demoUrl: "https://your-demo-link.com/...",
+    imageUrl: "images/projectPic/backend.png",
+    url: "https://github.com/amrylil/hotel-reservasi-api",
+    demoUrl: "https://hotel-api-demo.vercel.app/docs",
   },
   {
     title: "Finance Track API",
@@ -104,9 +142,60 @@ export const projectsData = [
       { name: "PostgreSQL", icon: SiPostgresql },
       { name: "PHP", icon: FaPhp },
     ],
-    imageUrl: "images/projectPic/api-finance-track.jpg",
+    imageUrl: "images/projectPic/backend.png",
     url: "https://github.com/amrylil/finance_report_api",
     demoUrl: "https://your-docs-link.com/...",
+  },
+
+  // {
+  //   title: "VistaRoom",
+  //   description:
+  //     "A hotel reservation platform that allows users to book rooms, manage reservations, and handle online payments with a clean and responsive interface.",
+  //   type: "Fullstack",
+  //   techStack: [
+  //     { name: "Laravel", icon: FaLaravel, color: "#FF2D20" },
+  //     { name: "MySQL", icon: SiMysql, color: "#00758F" },
+  //     { name: "Alpine.js", icon: SiAlpinedotjs, color: "#8BC0D0" },
+  //     { name: "Tailwind", icon: SiTailwindcss, color: "#38BDF8" },
+  //     { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
+  //   ],
+  //   imageUrl: "images/projectPic/vistaroom.jpg",
+  //   url: "https://github.com/amrylil/reservasi-hotel",
+  //   demoUrl:
+  //     "https://play.google.com/store/apps/details?id=com.amry.musicplayer",
+  // },
+  {
+    title: "Handmade Store",
+    description:
+      "An e-commerce platform for selling handmade crafts online with features for catalog browsing, cart, and checkout.",
+    type: "Fullstack",
+    techStack: [
+      { name: "Laravel", icon: FaLaravel, color: "#FF2D20" },
+      { name: "MySQL", icon: SiMysql, color: "#00758F" },
+      { name: "Alpine.js", icon: SiAlpinedotjs, color: "#8BC0D0" },
+      { name: "Tailwind", icon: SiTailwindcss, color: "#38BDF8" },
+      { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
+    ],
+    imageUrl: "images/projectPic/handmade.jpg",
+    url: "https://github.com/amrylil/handmade",
+    demoUrl:
+      "https://play.google.com/store/apps/details?id=com.amry.musicplayer",
+  },
+  {
+    title: "LeoniCare",
+    description:
+      "A web application to manage blood donations, donor registrations, and blood stock information with an admin dashboard using Filament and Livewire.",
+    type: "Fullstack",
+    techStack: [
+      { name: "Laravel", icon: FaLaravel, color: "#FF2D20" },
+      { name: "Filament", icon: SiFilament, color: "#16A34A" },
+      { name: "Livewire", icon: SiLivewire, color: "#9333EA" },
+      { name: "Tailwind", icon: SiTailwindcss, color: "#38BDF8" },
+      { name: "MySQL", icon: SiMysql, color: "#00758F" },
+    ],
+    imageUrl: "images/projectPic/leonicare.jpg",
+    url: "https://github.com/amrylil/redlife",
+    demoUrl: "https://leonicare.laravel.cloud",
   },
   {
     title: "Music Player Mobile App",
@@ -116,7 +205,7 @@ export const projectsData = [
     techStack: [
       { name: "Kotlin", icon: SiKotlin },
       { name: "Firebase", icon: SiFirebase },
-      { name: "YouTube API", icon: FiYoutube }, // Assuming YouTube API is represented by MongoDB icon for consistency
+      { name: "YouTube API", icon: FiYoutube },
     ],
     imageUrl: "images/projectPic/mobileapp.jpg",
     url: "https://github.com/AmryLil/MusicPlayer",

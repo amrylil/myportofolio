@@ -107,46 +107,36 @@ const ProjectDetails = ({ project, direction, isFirstRender }) => {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           {project.url && (
-            <motion.div
-              className="flex rounded-md text-slate-900 justify-center items-center bg-slate-50 cursor-pointer"
-              variants={buttonVariants}
-              whileHover="hover"
-              whileTap="tap"
-            >
-              <h3 className="mx-3 font-bold">Github</h3>
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-4xl cursor-pointer"
+            <a href={project.url} target="_blank" rel="noopener noreferrer">
+              <motion.div
+                className="flex rounded-md text-slate-900 justify-center items-center bg-slate-50 cursor-pointer"
+                variants={buttonVariants}
+                whileHover="hover"
+                whileTap="tap"
               >
-                <FaGithubSquare />
-              </a>
-            </motion.div>
+                <h3 className="mx-3 font-bold">Github</h3>
+                <FaGithubSquare className="text-4xl" />
+              </motion.div>
+            </a>
           )}
 
           {project.demoUrl && buttonConfig && (
-            <motion.div
-              className="flex rounded-md text-slate-900 justify-center items-center bg-slate-50 p-0.5 group cursor-pointer"
-              variants={buttonVariants}
-              whileHover="hover"
-              whileTap="tap"
-            >
-              <h3 className="mx-3 font-bold">{buttonConfig.text}</h3>
+            <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
               <motion.div
-                className="bg-slate-900 rounded-md p-1.5"
-                transition={{ duration: 0.3 }}
+                className="flex rounded-md text-slate-900 justify-center items-center bg-slate-50 p-0.5 group cursor-pointer"
+                variants={buttonVariants}
+                whileHover="hover"
+                whileTap="tap"
               >
-                <a
-                  href={project.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xl text-slate-50 cursor-pointer"
+                <h3 className="mx-3 font-bold">{buttonConfig.text}</h3>
+                <motion.div
+                  className="bg-slate-900 rounded-md p-1.5"
+                  transition={{ duration: 0.3 }}
                 >
-                  <GrFormNextLink className="group-hover:rotate-0 rotate-45 transition-all duration-300" />
-                </a>
+                  <GrFormNextLink className="group-hover:rotate-0 rotate-45 transition-all duration-300 text-xl text-slate-50" />
+                </motion.div>
               </motion.div>
-            </motion.div>
+            </a>
           )}
         </motion.div>
       )}
