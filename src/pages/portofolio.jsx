@@ -24,7 +24,7 @@ const Portfolio = () => {
 
   return (
     <motion.div
-      className="container mx-auto p-4 h-screen md:px-28 px-6 mt-10"
+      className="container mx-auto p-4 h-screen md:px-28 px-6 mt-10 animated-element"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.7 }}

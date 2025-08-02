@@ -67,7 +67,7 @@ const ProjectCarousel = ({
 
   return (
     <motion.div
-      className="flex flex-col items-end gap-2 md:w-[60%] w-full relative"
+      className="flex flex-col items-end gap-2 md:w-[60%] w-full relative animated-translateY"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.3 }}

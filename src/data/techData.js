@@ -29,15 +29,8 @@ import {
 } from "react-icons/si";
 
 export const TechStackArray = [
-  { title: "HTML", icon: FaHtml5, color: "#E34F26", level: "Advanced" },
-  { title: "CSS", icon: FaCss3Alt, color: "#1572B6", level: "Advanced" },
   { title: "JavaScript", icon: FaJs, color: "#F7DF1E", level: "Intermediate" },
-  {
-    title: "TypeScript",
-    icon: SiTypescript,
-    color: "#3178C6",
-    level: "Beginner",
-  },
+
   { title: "ReactJS", icon: FaReact, color: "#61DAFB", level: "Intermediate" },
   { title: "Node.js", icon: FaNodeJs, color: "#3C873A", level: "Beginner" },
   { title: "Express.js", icon: SiExpress, color: "#3C873A", level: "Beginner" },
