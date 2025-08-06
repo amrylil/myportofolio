@@ -23,24 +23,22 @@ const buttonVariants = {
 const ProjectDetails = ({ project, direction, isFirstRender }) => {
   if (!project) return null;
 
-  // Ambil konfigurasi tombol berdasarkan tipe proyek, ubah ke huruf kecil agar cocok
   const buttonConfig = project.type
     ? demoButtonConfig[project.type.toLowerCase()]
     : null;
 
   return (
     <motion.div
-      className="w-[40%] hidden md:block space-y-3 text-slate-50 pr-5 pt-3"
-      key={project.id} // Sebaiknya gunakan ID unik dari proyek
+      className="w-full lg:w-[40%] space-y-3 text-slate-50 lg:pr-5 pt-3 order-2 lg:order-1"
+      key={project.id}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      {/* Bagian Judul, Deskripsi, dan Teknologi tetap sama... */}
-      <div className="h-14 mb-2">
+      <div className="mb-2 hidden md:block">
         <motion.h1
-          className="font-bold text-3xl text-green-400"
+          className="font-bold text-2xl md:text-3xl text-green-400 leading-tight"
           initial={
             isFirstRender
               ? { opacity: 1 }
@@ -53,8 +51,9 @@ const ProjectDetails = ({ project, direction, isFirstRender }) => {
         </motion.h1>
       </div>
 
-      <div className="h-[70px] overflow-hidden mb-3">
+      <div className="mb-3 h-24 md:h-auto">
         <motion.p
+          className="text-sm md:text-base leading-relaxed"
           initial={
             isFirstRender
               ? { opacity: 1 }
@@ -67,9 +66,9 @@ const ProjectDetails = ({ project, direction, isFirstRender }) => {
         </motion.p>
       </div>
 
-      <div className="h-40">
+      <div className="mb-4 hidden md:block">
         <motion.h4
-          className="text-green-400 font-semibold text-lg mt-2"
+          className="text-green-400 font-semibold text-base md:text-lg mt-2 mb-3"
           initial={
             isFirstRender
               ? { opacity: 1 }
@@ -80,7 +79,7 @@ const ProjectDetails = ({ project, direction, isFirstRender }) => {
         >
           Technologies.
         </motion.h4>
-        <motion.div className="grid grid-cols-3 gap-2 mt-3">
+        <motion.div className="grid grid-cols-2 md:grid-cols-3 gap-2">
           {project.techStack.map((tech, index) => (
             <motion.div
               key={`${project.id}-${tech.name}`}
@@ -101,39 +100,51 @@ const ProjectDetails = ({ project, direction, isFirstRender }) => {
 
       {(project.url || project.demoUrl) && (
         <motion.div
-          className="flex gap-2 items-end"
+          className="flex flex-row sm:flex-row gap-2 items-stretch"
           initial={isFirstRender ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           {project.url && (
-            <a href={project.url} target="_blank" rel="noopener noreferrer">
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
               <motion.div
-                className="flex rounded-md text-slate-900 justify-center items-center bg-slate-50 cursor-pointer"
+                className="flex h-full items-center justify-center gap-2 rounded-md text-slate-900 bg-slate-50 cursor-pointer px-4 py-2"
                 variants={buttonVariants}
                 whileHover="hover"
                 whileTap="tap"
               >
-                <h3 className="mx-3 font-bold">Github</h3>
-                <FaGithubSquare className="text-4xl" />
+                <h3 className="font-bold text-sm md:text-base">Github</h3>
+                <FaGithubSquare className="text-2xl md:text-3xl" />
               </motion.div>
             </a>
           )}
 
           {project.demoUrl && buttonConfig && (
-            <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
               <motion.div
-                className="flex rounded-md text-slate-900 justify-center items-center bg-slate-50 p-0.5 group cursor-pointer"
+                className="flex h-full items-center justify-center gap-2 rounded-md text-slate-900 bg-slate-50 cursor-pointer px-4 py-2 group"
                 variants={buttonVariants}
                 whileHover="hover"
                 whileTap="tap"
               >
-                <h3 className="mx-3 font-bold">{buttonConfig.text}</h3>
+                <h3 className="font-bold text-sm md:text-base">
+                  {buttonConfig.text}
+                </h3>
                 <motion.div
-                  className="bg-slate-900 rounded-md p-1.5"
+                  className="bg-slate-900 rounded-md p-1 flex items-center justify-center"
                   transition={{ duration: 0.3 }}
                 >
-                  <GrFormNextLink className="group-hover:rotate-0 rotate-45 transition-all duration-300 text-xl text-slate-50" />
+                  <GrFormNextLink className="group-hover:rotate-0 rotate-45 transition-all duration-300 text-lg md:text-xl text-slate-50" />
                 </motion.div>
               </motion.div>
             </a>
@@ -143,5 +154,4 @@ const ProjectDetails = ({ project, direction, isFirstRender }) => {
     </motion.div>
   );
 };
-
 export default ProjectDetails;

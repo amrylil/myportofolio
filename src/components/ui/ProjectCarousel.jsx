@@ -20,7 +20,7 @@ const ProjectCarousel = ({
   onDirectionChange,
   isAnimating,
 }) => {
-  const scrollContainerRef = useRef(null);
+  const scrollContainerRef = React.useRef(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handlePrev = () => {
@@ -67,7 +67,7 @@ const ProjectCarousel = ({
 
   return (
     <motion.div
-      className="flex flex-col items-end gap-2 md:w-[60%] w-full relative animated-translateY"
+      className="flex flex-col items-end gap-2 w-full lg:w-[60%] relative order-1 lg:order-2"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.3 }}
@@ -75,7 +75,7 @@ const ProjectCarousel = ({
       <div className="relative w-full">
         <div
           ref={scrollContainerRef}
-          className="flex border rounded-lg overflow-hidden border-green-600 overflow-x-auto no-scrollbar snap-x snap-mandatory w-full h-[400px] gap-3 hover:shadow-lg hover:shadow-green-600/30 transition-all duration-300"
+          className="flex border rounded-lg overflow-hidden border-green-600 overflow-x-auto no-scrollbar snap-x snap-mandatory w-full h-[250px] sm:h-[300px] lg:h-[400px] gap-3 hover:shadow-lg hover:shadow-green-600/30 transition-all duration-300"
           style={{ scrollBehavior: "smooth" }}
           onMouseEnter={() => setHoveredIndex(currentIndex)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -97,12 +97,14 @@ const ProjectCarousel = ({
                 layoutId={`project-image-${index}`}
               />
               <motion.div
-                className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4 md:hidden"
+                className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3 sm:p-4 lg:hidden"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <h3 className="font-bold text-lg">{project.title}</h3>
+                <h3 className="font-bold text-base sm:text-lg">
+                  {project.title}
+                </h3>
                 <div className="flex flex-wrap gap-1 mt-1">
                   {project.techStack.slice(0, 3).map((tech, idx) => (
                     <span
@@ -149,7 +151,7 @@ const ProjectCarousel = ({
           whileHover="hover"
           whileTap="tap"
         >
-          <GrFormPrevious size={28} />
+          <GrFormPrevious size={24} className="sm:w-7 sm:h-7" />
         </motion.button>
         <div className="flex items-center gap-1">
           {projects.map((_, index) => (
@@ -177,11 +179,10 @@ const ProjectCarousel = ({
           whileHover="hover"
           whileTap="tap"
         >
-          <GrFormNext size={28} />
+          <GrFormNext size={24} className="sm:w-7 sm:h-7" />
         </motion.button>
       </div>
     </motion.div>
   );
 };
-
 export default ProjectCarousel;

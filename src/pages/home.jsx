@@ -51,16 +51,16 @@ const Home = () => {
             filled with endless opportunities and success.
           </div>
           {/* Location */}
-          <div className="inline-flex items-center gap-2 text-gray-400">
+          <div className="items-center gap-2 text-gray-400 hidden md:inline-flex">
             <FaMapMarkerAlt className="text-green-500" />
             <span>Makassar, Indonesia</span>
           </div>
 
           {/* Social Links */}
           <div className="space-y-4">
-            <div className="flex items-center gap-4 justify-center lg:justify-start">
+            <div className=" items-center gap-4 justify-center lg:justify-start hidden md:flex">
               <div className="h-px bg-gradient-to-r from-transparent via-green-500 to-transparent flex-1 max-w-20"></div>
-              <span className="text-gray-300 font-medium tracking-wider text-sm">
+              <span className="text-gray-300 font-medium  tracking-wider text-sm">
                 CONNECT
               </span>
               <div className="h-px bg-gradient-to-r from-transparent via-green-500 to-transparent flex-1 max-w-20"></div>
@@ -93,7 +93,7 @@ const Home = () => {
               <span>Download CV</span>
             </a>
 
-            <button className="group inline-flex items-center gap-3 px-6 py-2 border-2 border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 hover:border-green-400 transition-all duration-300 backdrop-blur-sm">
+            <button className="group items-center gap-3 px-6 py-2 border-2 border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 hover:border-green-400 transition-all duration-300 backdrop-blur-sm hidden md:inline-flex">
               <span>View Projects</span>
               <div className="w-4 h-4 rounded-full border-2 border-current group-hover:animate-spin"></div>
             </button>

@@ -89,7 +89,7 @@ export const projectsData = [
   {
     title: "Helpdesk LLDIKTI 9",
     description:
-      "A helpdesk system developed during my MSIB Batch 7 internship at LLDIKTI 9. I worked on the backend API, while the frontend was built using React JS. The system manages support tickets with authentication and role-based access.",
+      "A helpdesk system developed during my MSIB Batch 7 internship at LLDIKTI 9. I worked on the backend API, while the frontend was built using React JS.",
     type: "Fullstack",
     techStack: [
       { name: "Golang", icon: FaGolang, color: "#00ADD8" },
