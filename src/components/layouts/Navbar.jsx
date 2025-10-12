@@ -15,11 +15,10 @@ const Navbar = ({
     setBtnMenu(!btnMenu);
   };
 
-  
   return (
     <div className="w-full flex justify-center">
       <Analytics />
-      <nav className="flex w-full md:px-28 px-6  py-5 justify-between fixed z-10 bg-opacity-80 bg-gray-900 backdrop-blur-sm ">
+      <nav className="flex w-full md:px-28 lg:px-28 px-6  py-5 justify-between fixed z-10 bg-opacity-80 bg-gray-900 backdrop-blur-sm ">
         <div className="text-gray-50 text-xl font-bold">
           Lil
           <span
